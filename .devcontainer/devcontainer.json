@@ -1,0 +1,15 @@
+{
+  "name": "Programmieren 2 – Fokus-Tag 1",
+  "image": "mcr.microsoft.com/devcontainers/python:3.12",
+  "postCreateCommand": "pip install pytest",
+  "customizations": {
+    "vscode": {
+      "extensions": ["ms-python.python"],
+      "settings": {
+        "github.copilot.enable": { "*": false },
+        "chat.disableAIFeatures": true,
+        "editor.inlineSuggest.enabled": false
+      }
+    }
+  }
+}
