@@ -5,3 +5,5 @@ print("finn hats geschafft")
 print(" hshshshs")
 
 print("test für navid und aldijon")
+
+print("kunde")
