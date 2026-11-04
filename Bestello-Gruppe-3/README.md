@@ -22,7 +22,7 @@ Alle Befehle im Ordner ausführen, der Bestelo, Tests und pytest.ini enthält.
 
 python -m pip install pytest
 python -m Bestelo
-python -m pytest -v
+python -m pytest -v (alle tests gleichzeitig)
 
 - Beispiel: Nur die Kundentests im Terminal starten
 
