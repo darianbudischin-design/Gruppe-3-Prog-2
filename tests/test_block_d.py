@@ -1,4 +1,4 @@
-from block_d import Verein
+from kunden import Verein
 from kunden import Geschaeftskunde, Kunde, Privatkunde
 
 

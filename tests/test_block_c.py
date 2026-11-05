@@ -1,6 +1,6 @@
 import pytest
 
-from block_c import Lagerartikel
+from rechnung import Lagerartikel
 
 
 def test_block_c_start():

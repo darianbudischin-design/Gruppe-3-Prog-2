@@ -1,4 +1,4 @@
-from block_b import Rechnung
+from rechnung import Rechnung
 
 
 def test_block_b_konstruktor_und_klassenattribut():

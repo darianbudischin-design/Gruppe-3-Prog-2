@@ -43,3 +43,28 @@ if __name__ == "__main__":
     kunden: list[Kunde] = [anna, ben]
     for kunde in kunden:                            # Polymorphie
         print(f"{kunde.name}: {kunde.rabattsatz():.0%} Rabatt")
+
+class Verein(Kunde):
+    """Verwaltet einen Verein und seinen Rabatt."""
+
+    def __init__(self, name: str, email: str, kundennummer: int,
+                 vereinsregisternummer: str, gemeinnuetzig: bool = True) -> None:
+        super().__init__(name, email, kundennummer)
+        self.vereinsregisternummer = vereinsregisternummer
+        self.gemeinnuetzig = gemeinnuetzig
+
+    @property
+    def vereinsregisternummer(self) -> str:
+        return self._vereinsregisternummer
+
+    @vereinsregisternummer.setter
+    def vereinsregisternummer(self, wert: str) -> None:
+        if not isinstance(wert, str) or not wert.startswith("VR ") or not wert[3:].isdigit():
+            raise ValueError("Registernummer muss mit VR und einem Leerzeichen beginnen, gefolgt von Ziffern")
+        self._vereinsregisternummer = wert
+
+    def begruessung(self) -> str:
+        return f"An den Vorstand des Vereins {self.name}"
+
+    def rabattsatz(self) -> float:
+        return 0.05 if self.gemeinnuetzig else 0.02

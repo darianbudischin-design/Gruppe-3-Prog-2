@@ -23,16 +23,46 @@ Fertig, wenn pytest -k block_c "6 passed" meldet und Ihre Ausgabe so aussieht:
 
 
 class Lagerartikel:
-    pass  # TODO C1
+    """Verwaltet einen Lagerartikel mit Bestand und Mindestbestand."""
 
+    def __init__(
+        self, bezeichnung: str, mindestbestand: int = 0
+    ) -> None:
+        self.bezeichnung = bezeichnung
+        self._bestand = 0
+        self.mindestbestand = mindestbestand
 
-if __name__ == "__main__":
-    # a = Lagerartikel("Druckerpapier", mindestbestand=10)
-    # a.zugang(12)
-    # a.abgang(5)
-    # print(a.bestand, a.muss_nachbestellt_werden)
-    # try:
-    #     a.bestand = 100
-    # except AttributeError:
-    #     print("bestand ist schreibgeschützt")
-    pass
+    @property
+    def bestand(self) -> int:
+        """Liefert den aktuellen Bestand."""
+        return self._bestand
+
+    @property
+    def mindestbestand(self) -> int:
+        """Liefert den Mindestbestand."""
+        return self._mindestbestand
+
+    @mindestbestand.setter
+    def mindestbestand(self, wert: int) -> None:
+        if wert < 0:
+            raise ValueError("Mindestbestand darf nicht negativ sein.")
+        self._mindestbestand = wert
+
+    @property
+    def muss_nachbestellt_werden(self) -> bool:
+        """Zeigt an, ob der Bestand unter dem Mindestbestand liegt."""
+        return self._bestand < self.mindestbestand
+
+    def zugang(self, menge: int) -> None:
+        """Erhöht den Bestand um eine positive Menge."""
+        if menge <= 0:
+            raise ValueError("Die Menge muss größer als 0 sein.")
+        self._bestand += menge
+
+    def abgang(self, menge: int) -> None:
+        """Verringert den Bestand um eine verfügbare positive Menge."""
+        if menge <= 0:
+            raise ValueError("Die Menge muss größer als 0 sein.")
+        if menge > self._bestand:
+            raise ValueError("Nicht genügend Bestand vorhanden.")
+        self._bestand -= menge

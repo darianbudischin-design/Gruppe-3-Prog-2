@@ -1,4 +1,4 @@
-from block_a import Mitarbeiter, lohnsumme, teuerste_person
+from mitarbeiter import Mitarbeiter, lohnsumme, teuerste_person
 
 
 def team():

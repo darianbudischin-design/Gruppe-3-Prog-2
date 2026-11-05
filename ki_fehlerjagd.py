@@ -20,7 +20,7 @@ class Mitarbeiter:
         self.stundenlohn = stundenlohn
         self.projekte = projekte
 
-    def monatsgehalt(self, stunden: float) -> float:
+    def monatsgehalt(self,stundenlohn, stunden: float) -> float:
         return round(stundenlohn * stunden, 2)
 
     def projekt_hinzufuegen(self, projekt: str) -> None:
