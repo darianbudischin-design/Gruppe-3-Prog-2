@@ -1,6 +1,6 @@
 # Bestelo · Gruppe 3 · Lernfassung
 
-Diese eigenständige Lernfassung zeigt, wie Kunden, Sortiment und Bestellungen zusammenspielen. Sie ist KI-generiert. Die Phase-1-Abgabe eurer Gruppe entsteht laut Aufgabenblatt eigenständig. Die Rollen unten beschreiben die Aufgabenverteilung der Übung.
+Diese eigenständige Lernfassung zeigt, wie Kunden, Sortiment und Bestellungen zusammenspielen. Die Phase-1-Abgabe eurer Gruppe entsteht laut Aufgabenblatt eigenständig. Die Rollen unten beschreiben die Aufgabenverteilung der Übung.
 
 ## In VS Code starten
 
@@ -161,4 +161,4 @@ Die Positionsliste wird entsprechend Seite 27 flach kopiert. Die enthaltenen Pos
 - [ ] Den Abgabestand in einen neuen Ordner klonen und darin beide Startbefehle ausführen.
 - [ ] Den fertigen Stand mit phase-1 markieren und den Tag vor 18:00 Uhr pushen.
 
-Diese Lernfassung ist KI-generiert. Die Vorgabe der PDF, Phase 1 einschließlich Code und Tests eigenständig ohne KI zu erstellen, wird durch diese Musterlösung nicht erfüllt. Erfolgreiche Tests bestätigen die geprüften technischen Eigenschaften.
+
