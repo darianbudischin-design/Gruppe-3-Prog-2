@@ -34,10 +34,10 @@ def main() -> None:
     for produkt in sorted(produkte):
         print(produkt)
 
-    anna = Privatkunde(1001, "Anna Müller", "anna@example.com", 1995, stammkunde=True)
-    ben = Geschaeftskunde(1002, "Ben Schmidt", "ben@schmidt-it.de",
+        anna = Privatkunde("Anna Müller", "anna@example.com", 1001, 1995, stammkunde=True)
+    ben = Geschaeftskunde("Ben Schmidt", "ben@schmidt-it.de", 1002,
                           "Schmidt IT GmbH", "DE123456789")
-    verein = Verein(1003, "SV Musterstadt", "info@sv-musterstadt.de", "VR 1234")
+    verein = Verein("SV Musterstadt", "info@sv-musterstadt.de", 1003, "VR 1234")
     kunden: list[Kunde] = [anna, ben, verein]
     # In einer gemeinsamen Liste können unterschiedliche Kundentypen stehen.
     for kunde in kunden:
