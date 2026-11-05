@@ -2,16 +2,6 @@
 
 Bestelo zeigt Kunden, Produkte und Bestellungen eines allgemeinen Shopsystems.
 
-## Team
-
-| Rolle | Name | Aufgaben |
-
-|Person 1 | eintragen | eintragen | Kunde, Privatkunde, test_kunde.py | 
-|Person 2 | eintragen | eintragen | Geschaeftskunde, Verein, test_kundentypen.py | 
-|Person 3 | eintragen | eintragen | Produkt, CSV-Datei, test_produkt.py | 
-|Person 4 | eintragen | eintragen | Bestellposition, Bestellung, test_bestellung.py | 
-|Person 5 | eintragen | eintragen | Demo, README, UML, test_integration.py | 
-
 ## Starten
 
 Voraussetzungen: Python ab 3.10 und pytest.
